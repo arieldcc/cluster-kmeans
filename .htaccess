@@ -1,0 +1,28 @@
+Options +FollowSymlinks
+
+RewriteEngine on
+
+RewriteRule ^index\.adm$ media.php?module=home [L]
+RewriteRule ^formulir-pendaftaran\.html$ media.php?module=formulir&id=$1 [L]
+RewriteRule ^simpan-formulir\.html$ media.php?module=simpanformulir&id=$1 [L]
+RewriteRule ^prosedur-pendaftaran\.html$ media.php?module=prosedur&id=$1 [L]
+RewriteRule ^contact-us\.adm$ media.php?module=hubungikami&id=$1 [L]
+RewriteRule ^analisasaw\.adm$ media.php?module=prosessaw [L]
+RewriteRule ^bantuan\.html$ media.php?module=bantuan&id=$1 [L]
+RewriteRule ^data-pendaftaran\.html$ media.php?module=datapendaftaran&id=$1 [L]
+
+RewriteRule ^news-(.*)\.adm$ media.php?module=detailberita&id=$1 [L]
+
+RewriteRule ^login\.adm$ media.php?module=form_login&id=$1 [L]
+RewriteRule ^register\.html$ media.php?module=register&id=$1 [L]
+RewriteRule ^aksi-register\.html$ media.php?module=aksiregister&id=$1 [L]
+RewriteRule ^alternatif-kriteria\.html$ media.php?module=alternatifkriteria&id=$1 [L]
+RewriteRule ^analisa-members\.html$ media.php?module=analisamembers&analisa=$1 [L]
+
+RewriteRule ^profil\.adm$ media.php?module=profil&id=$1 [L]
+RewriteRule ^hubungi-aksi\.adm$ media.php?module=hubungiaksi&id=$1 [L]
+RewriteRule ^komoditi\.adm$ media.php?module=komoditi&id=$1 [L]
+RewriteRule ^contact\.adm$ media.php?module=contact&id=$1 [L]
+RewriteRule ^kriteria\.adm$ media.php?module=kriteria&id=$1 [L]
+
+#Options All -Indexes

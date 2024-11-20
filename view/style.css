@@ -1,0 +1,298 @@
+/* Universal Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    line-height: 1.4;
+    font-size: 14px;
+    background-color: #e1e1e1;
+    height: 100%;
+}
+
+a {
+    color: #2068AF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Buda', Arial, serif;
+    margin: 3px 0 15px 0;
+    font-weight: 100;
+    border-bottom: 1px dotted #919191;
+}
+h1 { font-size: 29px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); }
+h2 { font-size: 25px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); }
+
+/* Wrapper */
+#wrap {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+#header {
+    width: 100%;
+    height: 200px;
+    background: url(images/hheader.jpg) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+}
+
+#header h1, #header h2 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Menu */
+#menu {
+    width: 100%;
+    background-color: #2068AF;
+    text-align: center;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#menu ul li {
+    margin-right: 15px;
+}
+
+#menu ul li a {
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    text-decoration: none;
+}
+#menu ul li a:hover {
+    background-color: #1a5b93;
+}
+
+/* Content Layout */
+#content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    align-items: stretch; /* Aligns left and right content to the same height */
+}
+
+.left, .right {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.right {
+    flex: 1;
+    background: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    margin-top: 20px;
+}
+
+/* Footer */
+#footer {
+    width: 100%;
+    background-color: #2068AF;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.footerleft, .footerright {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #content {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Form Container */
+.form-container, .login-container, .table-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container h2, .login-container h1, .table-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2068AF;
+}
+
+/* Table Styling */
+.data {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.data th, .data td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.data th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.data td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.data td:nth-child(2) {
+    width: 5px;
+    text-align: center;
+}
+
+/* Input Fields */
+.data input[type="text"],
+.data input[type="password"],
+.data input.panjang,
+.data input.pendek {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.data input.pendek {
+    max-width: 200px;
+}
+
+/* Button Styling */
+.button {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2068AF;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+
+.button:hover {
+    background-color: #1a5b93;
+}
+
+/* Pagination Styling */
+.pagination-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.pagination li {
+    display: inline;
+}
+
+.pagination li a {
+    color: #2068AF;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+.pagination li.active a {
+    background-color: #2068AF;
+    color: #fff;
+    border: 1px solid #2068AF;
+}
+
+.pagination li a:hover {
+    background-color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container, .login-container, .table-container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .data td {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .pagination li a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .data, .data th, .data td {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .data tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pagination li a {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+}
